@@ -1,0 +1,63 @@
+﻿<h3>Message Type</h3>
+<br />
+
+<form novalidate name="formMessageTypeCreateView" class="form-horizontal" id="create-form">
+
+
+
+    <!--<div class="modal-header">
+        <button type="submit" class="btn-primary" ng-click="saveMessageType()">Save</button>
+    </div>
+    <br />-->
+
+    <div class="row">
+        <div>
+            <button id="messageTypeSave" class="btn btn-primary" ng-click="saveMessageType(messageType)" style="margin-right: 5px">
+                Save
+            </button>
+        </div>
+        <div>
+            <!--<button id="messageTypeEdit" class="btn btn-primary" ng-click="editMessageType()" style="margin-right: 5px">
+                Edit
+            </button>-->
+
+        </div>
+
+        <div>
+            <button id="messageTypeCancel" class="btn btn-primary" ng-click="cancelMessageType(messageType.MessageTypeID)" style="margin-right: 5px">
+                Cancel
+            </button>
+        </div>
+        <!--<div>
+            <button id="messageTypeDelete" class="btn btn-primary" ng-click="deleteMessageType(messageType.MessageTypeID)">
+                Delete
+            </button>
+        </div>-->
+
+
+
+
+    </div>
+    <br />
+
+    <div class="row">
+        <span class="input-group-addon" style="width: 120px; text-align: left">Message Type</span>
+        <input type="text" class="form-control" ng-model="MessageTypeName" name="MessageTypeName" />
+
+    </div>
+
+    <br />
+    <!--<span class="input-group-addon" style="width: 160px; text-align: left">Message Type</span>
+    <input type="text" class="form-control" ng-model="MessageTypeName" name="MessageTypeName" />
+    <br />
+    <br />-->
+    <br />
+
+
+</form>
+
+<!--{ @class = "form-control" , style = "width:200px-->
+<!--<select ng-options="pt.PersonTypeName for pt in personType" ng-model="personType">
+    <option value="">Person Type</option>
+    <option value=""></option>
+</select>-->

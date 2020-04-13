@@ -1,0 +1,82 @@
+﻿@model ONE_SMALL_STEP.ViewModels.PersonViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>Person type Name</th>
+    </tr>
+
+    @foreach (var item in Model.personTypeList)
+    {
+        <tr>
+            <td>@item.PersonTypeName
+            
+                <table class="table">
+                    <tr>
+                        <th>First Namee</th>
+                        <th>Last Name</th>
+                        <th>Email Addres</th>
+                    </tr>
+                    @if (item.Person != null)
+                    {
+                    foreach (var item1 in item.Person)
+                    {
+                        <tr>
+                            <td>@item1.FirstName</td>
+                            <td>@item1.LastName</td>
+                            <td>@item1.EmailAddress</td>
+                        </tr>
+                    }
+                    }
+
+                </table>
+            
+            
+            
+            </td>
+
+        </tr>
+
+    }
+
+
+</table>
+
+
+
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<p>
+    <span>Select Person Type </span>
+    <select id="persontypelist" onchange="getpersonlist()">
+
+        <option value="0">select person type</option>
+        @foreach (var item in Model.personTypeList)
+        {
+            <option value="@item.PersonTypeID">@item.PersonTypeName</option>        
+        }
+
+
+    </select>
+
+    <hr />*@
+    @*<span>Select Person Type </span>
+    <select id="persontypelist">
+
+        <option value="0">select person type</option>
+        @foreach (var item in Model.personlist)
+        {
+            <option value="@item.PersonTypeID">@item.FirstName</option>
+        }
+
+
+    </select>*@
+
+
+
+
+

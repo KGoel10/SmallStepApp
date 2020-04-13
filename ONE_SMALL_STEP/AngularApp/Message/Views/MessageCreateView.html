@@ -1,0 +1,80 @@
+﻿<h3>Message</h3>
+<br />
+
+<form novalidate name="formMessageTypeCreateView" class="form-horizontal" id="create-form">
+
+
+
+    <!--<div class="modal-header">
+        <button type="submit" class="btn-primary" ng-click="saveMessageType()">Save</button>
+    </div>
+    <br />-->
+
+    <div class="row">
+        <div>
+            <button id="messageTypeSave" class="btn btn-primary" ng-click="saveMessage(messageType)" style="margin-right: 5px">
+                Save
+            </button>
+        </div>
+        <div>
+            <!--<button id="messageTypeEdit" class="btn btn-primary" ng-click="editMessageType()" style="margin-right: 5px">
+                Edit
+            </button>-->
+
+        </div>
+
+        <div>
+            <button id="messageTypeCancel" class="btn btn-primary" ng-click="cancelMessage(messageType.MessageTypeID)" style="margin-right: 5px">
+                Cancel
+            </button>
+        </div>
+        <!--<div>
+            <button id="messageTypeDelete" class="btn btn-primary" ng-click="deleteMessageType(messageType.MessageTypeID)">
+                Delete
+            </button>
+        </div>-->
+
+
+
+
+    </div>
+    <br />
+
+    <!--<div class="modal-header">
+        <button type="submit" class="btn-primary" ng-click="savePerson()">Save Changes</button>
+    </div>-->
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Message Type</span>
+    <div>
+        <select class="dropdown" style="width:200px" ng-model="MessageTypeID" ng-options="mt.MessageTypeID as mt.MessageTypeName for mt in messageType"></select> 
+    </div>
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Name</span>
+    <input type="text" class="form-control" ng-model="MessageName" name="FirstName" />
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Description</span>
+    <input type="text" class="form-control" ng-model="MessageDescription" name="LastName" />
+    <br />
+
+    <span class="input-group-addon" style="width: 160px; text-align: left">File Name</span>
+    <input type="text" class="form-control" ng-model="MessageFileName" name="LastName" />
+    <br />
+
+    <span class="input-group-addon" style="width: 160px; text-align: left">Folder Location</span>
+    <input type="text" class="form-control" ng-model="MessageLocation" name="LastName" />
+    <br />
+
+
+    <br />
+
+    <br />
+
+
+
+</form>
+
+<!--{ @class = "form-control" , style = "width:200px-->
+<!--<select ng-options="pt.PersonTypeName for pt in personType" ng-model="personType">
+    <option value="">Person Type</option>
+    <option value=""></option>
+</select>-->

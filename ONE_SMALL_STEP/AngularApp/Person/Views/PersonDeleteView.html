@@ -1,0 +1,42 @@
+﻿<h3>Delete Person</h3>
+
+
+<form novalidate name="formPersonCreateView" class="form-horizontal" id="delete-form">
+
+
+
+    <div class="modal-header">
+        <button type="submit" class="btn-primary" ng-click="deletePerson(person.PersonID)">Delete Person</button>
+    </div>
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">First Name</span>
+    <input type="text" class="form-control" ng-model="person.FirstName" name="FirstName" />
+    <br />
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Last Name</span>
+    <input type="text" class="form-control" ng-model="person.LastName" name="LastName" />
+    <br />
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Email Address</span>
+    <input type="text" class="form-control" ng-model="person.EmailAddress" name="EmailAddress" />
+    <br />
+    <br />
+    <div>
+        <span class="input-group-addon" style="width: 160px; text-align: left">Screenshot</span>
+        <input type="text" class="form-control" ng-model="person.Screenshot" name="Screenshot" value="" />
+    </div>
+    <br />
+    <div>
+        <select class="dropdown" style="width:200px" ng-model="person.PersonTypeID" ng-options="pt.PersonTypeID as pt.PersonTypeName for pt in personType"></select>
+        <!--Selected Person ID : {{person.PersonTypeID}}-->
+    </div>
+    <br />
+
+
+</form>
+
+<!--{ @class = "form-control" , style = "width:200px-->
+<!--<select ng-options="pt.PersonTypeName for pt in personType" ng-model="personType">
+    <option value="">Person Type</option>
+    <option value=""></option>
+</select>-->

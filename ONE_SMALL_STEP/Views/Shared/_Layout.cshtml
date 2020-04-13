@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+
+</head>
+
+<body ng-app="appJS">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            @Html.ActionLink("ONE_SMALL_STEP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/person">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/messagetype">Message Type</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/message">Message</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+
+            @*<ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Person", "Index", "Person", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Message Type", "Index", "MessageType", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
+                </ul>*@
+
+
+
+            <form class="form-inline my-2 my-lg-0">
+                <div class="col-md-8">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </div>
+
+            </form>
+            @Html.Partial("_LoginPartial")
+        </div>
+
+    </nav>
+
+
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*<footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>*@
+    </div>
+
+
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/uigrid")
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
+    <script type="text/javascript">
+            window.MyApp = {};
+            MyApp.rootPath = '@Url.Content("~")';
+    </script>
+
+    <script src="~/AngularApp/Validator.js"></script>
+    <script src="~/AngularApp/app.js"></script>
+
+
+
+
+
+
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+            @RenderSection("jsCode", required: false)
+    </script>
+
+
+</body>
+</html>

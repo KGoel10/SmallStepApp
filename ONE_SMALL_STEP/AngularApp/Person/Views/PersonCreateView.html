@@ -1,0 +1,42 @@
+﻿<h3>Create Contact</h3>
+
+
+<form novalidate name="formPersonCreateView" class="form-horizontal" id="create-form">
+
+    
+
+    <div class="modal-header">
+        <button type="submit" class="btn-primary" ng-click="savePerson()">Save Changes</button>
+    </div>
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">First Name</span>
+    <input type="text" class="form-control" ng-model="FirstName" name="FirstName" />
+    <br />
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Last Name</span>
+    <input type="text" class="form-control" ng-model="LastName" name="LastName" />
+    <br />
+    <br />
+    <span class="input-group-addon" style="width: 160px; text-align: left">Email Address</span>
+    <input type="text" class="form-control" ng-model="EmailAddress" name="EmailAddress" />
+    <br />
+    <br />
+    <div>
+        <span class="input-group-addon" style="width: 160px; text-align: left">Screenshot</span>
+        <input type="text" class="form-control" ng-model="Screenshot" name="Screenshot" value="" />
+    </div>
+    <br />
+    <div>
+        <select class="dropdown" style="width:200px" ng-model="PersonTypeID" ng-options="pt.PersonTypeID as pt.PersonTypeName for pt in personType"></select>
+        <!--Selected Person ID : {{person.PersonTypeID}}-->
+    </div>
+    <br />
+
+
+</form>
+
+<!--{ @class = "form-control" , style = "width:200px-->
+<!--<select ng-options="pt.PersonTypeName for pt in personType" ng-model="personType">
+    <option value="">Person Type</option>
+    <option value=""></option>
+</select>-->

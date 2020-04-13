@@ -1,0 +1,59 @@
+﻿@*@{
+        Layout = null;
+    }*@
+
+@{
+    ViewBag.Title = "One Small Step";
+}
+
+@section scripts {
+    <script src="~/AngularApp/Person/App.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/RootViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonHomeViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonListViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonCreateViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/mainHomeViewModel.js"></script>
+
+
+    @*<script src="~/AngularApp/Person/ViewModels/PersonDeleteViewModel.js"></script>*@
+    @*<script src="~/AngularApp/Person/ViewModels/PersonListViewModel.js"></script>*@
+
+}
+
+@*@section jsCode {
+    angular.bootstrap(document.getElementById("person"), ['person']);
+}*@
+
+
+<div>
+
+    <div id="person" ng-controller="personViewModel">
+        <h1>THIS IS THE PERSON INDEX</h1>
+        <h2 class="testing-blue">{{personHomeText}}</h2>
+        <h2>{{pageHeading}}</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary"
+                        ng-click="personList()">
+                    View Contact List
+                </button>
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn btn-primary"
+                        ng-click="createPerson()">
+                    Create Contact
+
+                </button>
+            </div>
+
+        </div>
+        <br />
+        <br />
+        <div ng-view></div>
+
+    </div>
+</div>
+
+

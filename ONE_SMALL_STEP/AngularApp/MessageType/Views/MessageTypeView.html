@@ -1,0 +1,50 @@
+﻿<h3>{{pageHeading}}</h3>
+<br />
+<div class="row">
+    <div>
+        <button id="messageTypeEdit" class="btn btn-primary" ng-click="editMessageType()" style="margin-right: 5px">
+            Edit
+        </button>
+
+    </div>
+    <div>
+        <!--<button class="btn btn-primary" ng-click="savePerson(person.PersonID,person)">  -->
+        <button id="messageTypeSave" class="btn btn-primary" ng-click="saveMessageType(messageType)" style="margin-right: 5px">
+            Save
+        </button>
+    </div>
+    <div>
+        <button id="messageTypeCancel" class="btn btn-primary" ng-click="cancelMessageType(messageType.MessageTypeID)" style="margin-right: 5px">
+            Cancel
+        </button>
+    </div>
+    <div>
+        <button id="messageTypeDelete" class="btn btn-primary" ng-click="deleteMessageType(messageType.MessageTypeID)">
+            Delete
+        </button>
+    </div>
+
+
+</div>
+<fieldset id="messageTypeFieldset">
+    <!-- disabled false>-->
+    <div>
+        <br />
+        <span class="input-group-addon" style="width: 160px; text-align: left">Message Type</span>
+        <input type="text" class="form-control" ng-model="messageType.MessageTypeName" name="MessageType" />
+        <br />
+        <br />
+
+
+        <br />
+
+        <!--{ @class = "form-control" , style = "width:200px-->
+        <!--<select ng-options="pt.PersonTypeName for pt in personType" ng-model="personType">
+            <option value="">Person Type</option>
+            <option value=""></option>
+        </select>-->
+
+
+    </div>
+</fieldset>
+<!--document.getElementById("myFieldset").disabled = true;-->

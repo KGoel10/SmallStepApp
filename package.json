@@ -1,0 +1,17 @@
+{
+  "name": "ONE_SMALL_STEP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular-ui-grid": "^4.8.3",
+    "devextreme": "^19.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

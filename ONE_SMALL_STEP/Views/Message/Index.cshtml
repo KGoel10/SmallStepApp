@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ONE_SMALL_STEP.Data.Message>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddNewMessages")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageTypeID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageTypeID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MessageID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MessageID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MessageID })
+        </td>
+    </tr>
+}
+
+</table>

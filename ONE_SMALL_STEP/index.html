@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ONE SMALL STEP</title>
+
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/AngularApp/app.js"></script>
+    <link href="Content/bootstrap-lumen.css" rel="stylesheet" />
+</head>
+<body ng-app="app" class="container">
+    <div ng-controller="MainController">
+        <span>{{1 + 2}}</span>
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>calc test</td>
+            </tr>
+            <tr ng-repeat="person in persons">
+                <td ng-bind="person.FirstName"></td>
+                <td>{{person.LastName}}</td>
+                <td>{{1 + 2}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

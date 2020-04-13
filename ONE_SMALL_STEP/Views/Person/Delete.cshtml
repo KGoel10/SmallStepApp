@@ -1,0 +1,89 @@
+﻿@model ONE_SMALL_STEP.ViewModels.DeletePersonViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DeletePersonViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Screenshot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Screenshot)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="hidden" value="@Model.PersonID" name="PersonID" id="PersonID" />
+        <input type="hidden" value="@Model.PersonTypeID" name="PersonTypeID" id="PersonTypeID" />
+        <input type="hidden" value="@Model.PersonTypeName" name="PersonTypeName" id="PersonTypeName" />
+        <input type="hidden" value="@Model.FirstName" name="FirstName" id="FirstName" />
+        <input type="hidden" value="@Model.LastName" name="LastName" id="LastName" />
+        <input type="hidden" value="@Model.EmailAddress" name="EmailAddress" id="PersonTypeID" />
+        <input type="hidden" value="@Model.Screenshot" name="Screenshot" id="Screenshot" />
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

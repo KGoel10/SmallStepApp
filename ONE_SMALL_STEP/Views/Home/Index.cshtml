@@ -1,0 +1,51 @@
+﻿@*@{
+        Layout = null;
+    }*@
+
+@{
+    ViewBag.Title = "One Small Step";
+}
+
+@section scripts {
+    @*<script src="~/AngularApp/App.js"></script>*@
+    <script src="~/AngularApp/Person/App.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/RootViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonHomeViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonListViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonCreateViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/PersonViewModel.js"></script>
+    @*<script src="~/AngularApp/Person/ViewModels/PersonDeleteViewModel.js"></script>*@
+    <script src="~/AngularApp/Person/ViewModels/mainPersonListViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/mainHomeViewModel.js"></script>
+    <script src="~/AngularApp/MessageType/ViewModels/MessageTypeListViewModel.js"></script>
+    <script src="~/AngularApp/MessageType/ViewModels/MessageTypeCreateViewModel.js"></script>
+    <script src="~/AngularApp/MessageType/ViewModels/MessageTypeViewModel.js"></script>
+    @*<script src="~/AngularApp/Message/ViewModels/MessageListViewModel.js"></script>
+    <script src="~/AngularApp/Message/ViewModels/MessageTypeViewModel.js"></script>
+    <script src="~/AngularApp/Message/ViewModels/MessageViewModel.js"></script>*@
+
+    <script src="~/AngularApp/Message/ViewModels/MessageListViewModel.js"></script>
+    <script src="~/AngularApp/Message/ViewModels/MessageViewModel.js"></script>
+    <script src="~/AngularApp/Message/ViewModels/MessageCreateViewModel.js"></script>
+    <script src="~/AngularApp/Person/ViewModels/data.js"></script>
+    @*<script src="~/Scripts/ui-grid.js"></script>
+    <script src="~/Scripts/ui-grid.min.js"></script>*@
+
+}
+
+
+<div>
+
+    <div ng-controller="mainPersonListViewModel">
+        <h2>@*THIS IS THE HOME/INDEX PAGE*@</h2>
+        <div class="row">
+
+
+        </div>
+
+        <br />
+        <br />
+        <div ng-view></div>
+
+    </div>
+</div>

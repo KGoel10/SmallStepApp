@@ -1,0 +1,22 @@
+﻿<h3>{{pageHeading}}</h3>
+<div>
+    <table class="table table-striped table-hover">
+        <!--<thead>
+            <tr>
+                <th>Message Type</th>
+            </tr>
+        </thead>-->
+        <tbody ng-repeat="mt in messageTypes">
+            <tr>
+                <td>{{ mt.MessageTypeName }}</td>>
+                <td>
+                    <button class="btn btn-primary" ng-click="showMessageType(p.MesssageTypeID)">View Details</button>
+                </td>
+                <td>
+                    <button class="btn btn-primary" ng-click="deleteMessageTypeFromList($index)">Delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

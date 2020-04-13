@@ -1,0 +1,45 @@
+﻿<h3>Contact List</h3>
+<h3>{{pageHeading}}</h3>
+<div>
+    <a href="#" ng-click="refreshPersons()"><span class="glyphicon glyphicon-refresh"></span></a>
+    <!--<div>{{DISPLAY_TEST}}</div>-->
+    </div>
+    <div id="person">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Contact ID</th>
+                    <th>Contact Type</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="p in persons">
+                <tr>
+                    <td>{{ p.FirstName }}</td> <!--why doesn't this work: <td ng-model="p.FirstName"></td>-->
+                    <td>{{ p.LastName }}</td>
+                    <td>{{ p.EmailAddress}}</td>
+                    <td>{{ p.PersonID}}</td>
+                    <td>{{ p.PersonType}}</td>
+                    <!-- <td><a href="#" ng-click="showPerson(p)">View Details</a></td>   -->
+                    <!--<td><a href="#" ng-click="editPerson">Edit</a></td>
+                    <td><a href="#" ng-class="deletePerson">Delete</a></td>-->
+                    <td>
+                        <!--<button class="btn btn-primary" ng-click="deletePersonView(p.PersonID)">Delete View</button>-->
+                        <button class="btn btn-primary" ng-click="showPerson(p.PersonID)">View Details</button>
+                    </td>
+                    <!--<td>
+                        <button class="btn btn-primary" ng-click="editPerson()">Edit</button>
+                    </td>-->
+                    <td>
+                        <button class="btn btn-primary" ng-click="deletePersonFromList($index)">Delete</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
